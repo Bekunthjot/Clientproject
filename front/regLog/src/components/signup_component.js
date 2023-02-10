@@ -119,7 +119,7 @@ export default class SignUp extends Component {
           <input
             type="email"
             className="input100"
-            placeholder="Enter email"
+            placeholder="Enter connected linkedIn emails"
             onChange={(e) => this.setState({ email: e.target.value })}
           />
           <span class="focus-input100">
@@ -144,7 +144,7 @@ export default class SignUp extends Component {
             />
           </span>
         </div>
-        <div className="wrap-input100  m-b-23" style={{ marginBottom: "50px" }}>
+        <div className="wrap-input100  m-b-23" style={{ marginBottom: "20px" }}>
           <label className="label-input100">Password</label>
           <input
             type="password"

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import '../index.css'
-export default class UserDetails extends Component {
+export default class AdminDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,18 +31,42 @@ export default class UserDetails extends Component {
   render() {
     return (
       <div class="adminstyle">
-        <h1 class="title">Hello Admin</h1>
+        <h1 class="title">Welcome {this.state.adminData.name} </h1>
         <br />
-        <br />
-        <h2 class="title">Name</h2>
-        <h4 style={{ color: "#a64bf4" }}>
-          {this.state.adminData.name} 
-        </h4>
-        <br />
-        <br />
-        <h2 class="title"> Email</h2>{" "}
-        <h4 style={{ color: "#a64bf4" }}>{this.state.adminData.email}</h4>
-      </div>
+        <div class="card-deck" style={{width:"100%"}}>
+  <div class="card"style={{marginLeft:"30px"}} >
+    
+    <div class="card-body">
+      <h5 class="card-title" style={{color:"#CB1C8D"}}>User Accounts</h5>
+      <p class="card-text">Check all the users present </p>
+      <Link to="#" class="btn btn-light" style={{backgroundColor:"#CB1C8D" , marginTop:"10px"}}><ArrowForwardIosIcon
+                    style={{
+                      
+                      color: "#fff",
+                    }}
+                  /></Link>
+      
+    </div>
+  </div>
+ 
+  <div class="card"style={{marginLeft:"30px"}} >
+    
+    <div class="card-body">
+      <h5 class="card-title" style={{color:"#CB1C8D"}}>Utility</h5>
+      <p class="card-text">Check the utility of app </p>
+      <Link to="#" class="btn btn-light" style={{backgroundColor:"#CB1C8D" , marginTop:"10px"}}><ArrowForwardIosIcon
+                    style={{
+                      
+                      color: "#fff",
+                    }}
+                  /></Link>
+      
+    </div>
+  </div>
+ 
+  </div>
+</div>
+     
     );
   }
 }

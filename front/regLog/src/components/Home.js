@@ -20,11 +20,16 @@ export default class Home extends Component {
         <br />
         <br />
         <div className="mb-2">
-        <Link to="/sign-up">
+        <Link to={{
+    pathname: "/sign-up"
+  }}>
         <Button variant="success" size="lg" style={{marginRight:"40px"}}>
           USER
         </Button></Link>{' '}
-        <Link to="/sign-ag">
+        <Link  to={{
+    pathname: "/sign-in",
+    
+  }}>
         <Button variant="danger" size="lg">
           ADMIN
         </Button></Link>
